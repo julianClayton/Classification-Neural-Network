@@ -7,7 +7,7 @@ This repository contains an example of a MLP Neural Network written using Tensor
 4. Human Activity Recognition Using Smartphones Data Set (HAR) - https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones
 5. Wine = https://archive.ics.uci.edu/ml/datasets/Wine+Quality  (Only 50% with this one!)
 
-##Tutorial
+## Tutorial
 
 A tutorial to write a simple MLP Neural Network is provided in the tensorflow-introduction.pptx
 
