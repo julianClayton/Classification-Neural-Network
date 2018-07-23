@@ -95,13 +95,13 @@ class ClassificationNN:
 					summary_str = sess.run(self.merged_summary_op, feed_dict={self.x: batch_xs, self.y: batch_ys})
 					summary_writer.add_summary(summary_str, iteration*num_batches + i)
 				if iteration % self.display_step == 0:
-					print("Epoch:" + str(iteration+1) +  " cost=", "{:.9f}".format(avg_cost))
+					print("Epoch:" + str(iteration+1) +  " cost: ", "{:.9f}".format(avg_cost))
 
 			print("Training completed!")
   
 			predictions = tf.equal(tf.argmax(self.model, 1), tf.argmax(self.y, 1))
 			accuracy = tf.reduce_mean(tf.cast(predictions,  tf.float64))
-			print("Accuracy:", accuracy.eval({self.x: self.dataset.testing_X, self.y: self.dataset.testing_y}))
+			print("Testing accuracy:", accuracy.eval({self.x: self.dataset.testing_X, self.y: self.dataset.testing_y}))
 
 if __name__== "__main__":
 
